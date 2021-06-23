@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -11,7 +13,7 @@ class UserController extends Controller
         return view('user.signin');
     }
 
-    public function login(Request $request)
+    public function login(UserRequest $request)
   {
     $email    = $request->input('email');
     $password = $request->input('password');

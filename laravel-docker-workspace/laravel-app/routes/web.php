@@ -13,3 +13,4 @@
 
 Route::get('/', 'UserController@signin')->name('user.signin');
 Route::post('/user/login', 'UserController@login')->name('user.login');
+Route::get('/micropost/index', 'MicropostController@index')->name('micropost.index');
