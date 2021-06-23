@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if (\App::environmet('production')) {
+            \URL::forceSchemo('https');
+        }
     }
 }
